@@ -87,7 +87,7 @@ class BreathFilter:
             raise ValueError("MIDI input device not found: %s" % port_name)
 
         try:
-            midi_in.ignore_types(sysex=True, timing=True, active_sensing=True)
+            midi_in.ignore_types(sysex=True, timing=True, active_sense=True)
             midi_in.open_port(index)
             midi_in.set_callback(self._callback)
         except Exception:
